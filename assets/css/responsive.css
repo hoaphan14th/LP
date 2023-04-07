@@ -1,0 +1,139 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #6B3216;
+    --dark-color: #222;
+    --text-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+}
+
+
+/* ============ Mobile & Tablet ================= */
+
+@media (max-width: 1023px) {
+    .app {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .header {
+        justify-content: space-around;
+    }
+    .header__menu {
+        display: block;
+    }
+    .header__nav {
+        display: flex;
+        flex-direction: column;
+        min-width: 300px;
+        min-height: 400px;
+        background-color: var(--primary-color);
+        border-radius: 24px;
+        visibility: hidden;
+        opacity: 0;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .5s;
+    }
+    .header__nav.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .header__nav--link {
+        margin: 12px 50px;
+    }
+    .sales__info {
+        margin: 40px 0 0 0;
+        text-align: center;
+    }
+    .problem__content {
+        padding: 0px;
+    }
+    .problem__img {
+        margin-top: 45px;
+    }
+    .problem__info {
+        margin: 0;
+    }
+    .product__list--btn {
+        display: flex;
+        flex-direction: column;
+        margin: 0 20px;
+    }
+    .product__list--btn button {
+        margin: 12px 0 0 0;
+        width: 200px;
+    }
+    .sales__info--new-price {
+        animation: none;
+    }
+    .parallax {
+        height: 750px;
+    }
+    .reason__list {
+        margin-top: 24px;
+    }
+}
+
+/* ============ Tablet =================== */
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .problem__title {
+        padding: 0 8px;
+    }
+    .problem__content {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0px;
+    }
+    .problem__info {
+        margin: 0;
+    }
+}
+
+/* ============ Mobile ==================== */
+
+@media (max-width: 739px) {
+    .screen-form {
+        width: 90%;
+    }
+    .home__content,
+    .home__content.home__content--reverse {
+        padding: 0 20px;
+        text-align: center;
+    }
+    .problem__title {
+        padding: 0 8px;
+    }
+    .problem__content {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .problem__info {
+        margin: 0;
+    }
+    .parallax {
+        height: 1200px;
+    }
+    .solving__list {
+        margin: 0;
+        padding: 0 12px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+    .comment__list {
+        flex-direction: column;
+        padding: 0 12px;
+    }
+}

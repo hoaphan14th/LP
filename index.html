@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="./assets/css/grid.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <div class="form-overlay"></div>
+
+        <div class="screen-form">
+
+
+            <div class="close--btn">
+                <i class="bi bi-x-circle"></i>
+            </div>
+            <form id="form" class="contact-form__input">
+                <div class="input-box">
+                    <input id="name" type="text" required>
+                    <label for="name">Họ và tên</label>
+                </div>
+                <div class="input-box">
+                    <input id="phone" type="text" required>
+                    <label for="phone">Số điện thoại</label>
+                </div>
+                <div class="input-box">
+                    <input id="address" type="text" required>
+                    <label for="address">Địa chỉ</label>
+                </div>
+                <div class="info-box">
+                    <div class="info-box__item text-shadow">
+                        <h3 class="info-box__item--title">Giới tính</h3>
+                        <div class="info-box__item--check">
+                            <input checked="checked" type="radio" name="sex" id="male">
+                            <label for="male">Nam</label>
+                            <input checked="checked" type="radio" name="sex" id="female">
+                            <label for="female">Nữ</label>
+                        </div>
+                    </div>
+                    <div class="info-box__item text-shadow">
+                        <h3 class="info-box__item--title">Độ tuổi</h3>
+                        <div class="info-box__item--check">
+                            <input checked="checked" type="radio" name="sex" id="male">
+                            <label id="hihi" for="male">18-35</label>
+                            <input checked="checked" type="radio" name="sex" id="female">
+                            <label for="female">> 36</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form__submit">
+                    <button class="contact-form__submit--button">Đặt hàng ngay</button>
+                </div>
+            </form>
+        </div>
+
+        <a href="#" class="top">
+            <i class="bi bi-chevron-double-up"></i>
+        </a>
+
+        <a href="https://zalo.me/0332741249" class="zalo ">
+            <img src="./assets/img/zalo.png" alt="">
+        </a>
+
+        <!-- Loading Screen -->
+
+        <div id="loading-screen">
+            <div class="loading-indicator"></div>
+        </div>
+
+        <!-- Header -->
+
+        <header class="header">
+            <div class="row">
+                <div class="header__logo">
+                    <a href="#" class="header__logo--link">
+                        <img loading="lazy" src="./assets/img/Slide/z4238013248240_e6f8e8fdcfdb1172e07bb69bcb3e7a75.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="header__nav--overlay">
+                    <i class="menu__close bi bi-x"></i>
+                </div>
+                <nav class="header__nav">
+                    <a href="#problem" class="header__nav--link active">Dịch vụ</a>
+                    <a href="#product" class="header__nav--link">Sản phẩm</a>
+                    <a href="#reason" class="header__nav--link">Cam kết</a>
+                    <a href="#partner" class="header__nav--link">Đối tác</a>
+                    <a href="#contact" class="header__nav--link">Liên hệ</a>
+                </nav>
+
+            </div>
+            <div class="header__menu">
+                <i class="bi bi-list"></i>
+            </div>
+        </header>
+
+        <!-- Slider-Home -->
+
+        <section id="home" class="home">
+
+            <img loading="lazy" src="./assets/img/Slide/Desktop1.png" alt="" class="home__slider--img active">
+            <img loading="lazy" src="./assets/img/Slide/Desktop2.png" alt="" class="home__slider--img home__slider--reserve">
+            <div class="home__content active">
+                <h1 class="home__content--title">Coffee and Chill</h1>
+                <p class="home__content--desc">Cà phê khiến ta mạnh mẽ, điềm đạm và thông thái</p>
+                <button class="home__content--btn">
+                    <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">Mua ngay</span>
+                </button>
+            </div>
+
+            <div class="home__content home__content--reverse">
+                <h1 class="home__content--title">Cà phê and more....</h1>
+                <p class="home__content--desc">
+                    Thêm chút đường cà phê có ngọt ?<br>
+                    Thêm chút tình mình có thuộc về nhau ?
+                </p>
+                <button class="home__content--btn">
+                    <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">Mua ngay</span>
+                </button>
+            </div>
+
+            <div class="home__slider--nav">
+                <div style="display: none;" class="slider__nav--btn active"></div>
+                <div style="display: none;" class="slider__nav--btn"></div>
+            </div>
+
+        </section>
+
+        <!-- Sales -->
+
+        <section id="sales" class="sales grid wide">
+            <div class="row">
+                <div class="col l-6 m-12 c-12">
+                    <div class="sales__img">
+                        <img src="./assets/img/CaPheBotRangXay.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col l-6 m-12 c-12">
+                    <div class="sales__info">
+                        <h2 class="sales__info--name">Cà phê bột rang xay</h2>
+
+                        <p class="sales__info--desc">Cà phê bột rang xay 100 điểm. Nốc là mê</p>
+
+                        <div class="sales__info--rate">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+
+                        <button class="sales__info--sale">GIẢM 50%</button>
+
+                        <div class="sales__info--timer">
+                            <p>Khuyến mãi sẽ kết thúc sau: </p>
+                            <div class="sales__timer--clock">
+                                <div class="day">
+                                    <h2>00</h2>
+                                    <p style="color: #d6d5d5;">Ngày</p>
+                                </div>
+                                <div class="hour">
+                                    <h2>00</h2>
+                                    <p style="color: #d6d5d5;">Giờ</p>
+                                </div>
+                                <div class="minute">
+                                    <h2>00</h2>
+                                    <p style="color: #d6d5d5;">Phút</p>
+                                </div>
+                                <div class="second">
+                                    <h2>00</h2>
+                                    <p style="color: #d6d5d5;">Giây</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sales__info--notify">Nhanh tay lên, chỉ còn 300 sản phẩm</div>
+                        <div class="sales__info--old-price">399.000đ</div>
+                        <div class="sales__info--new-price">199.000đ</div>
+
+                        <div class="sales__info--button">
+                            <button class="sales__info--btn">Đặt hàng ngay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem -->
+
+        <section class="problem" id="problem">
+            <h3 class="problem__title">
+                BẠN ĐANG GẶP NHỮNG KHÓ KHĂN GÌ <br>
+                KHI LỰA CHỌN CÀ PHÊ ?
+            </h3>
+
+            <div class="grid wide">
+                <div class="row">
+                    <div class="problem__content">
+                        <div class="col l-9">
+                            <div class="problem__info">
+                                <div class="problem__info--list">
+                                    <i class="bi bi-emoji-angry"></i>
+                                    <p>Hàng giả, kém chất lượng</p>
+                                </div>
+                                <div class="problem__info--list">
+                                    <i class="bi bi-car-front-fill"></i>
+                                    <p>Bạn đã đặt hàng nhưng sản phẩm được gửi quá lâu, hay đơn giản bạn không hài lòng về chính sách giao hàng, vận chuyển.</p>
+                                </div>
+                                <div class="problem__info--list">
+                                    <i class="bi bi-info-circle"></i>
+                                    <p>Bạn sợ thông tin cá nhân bị rò rỉ, hay đội ngũ tư vấn khách hàng về sản phẩm không làm bạn thuyết phục.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="problem__img">
+                                <img src="./assets/img/problem.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solving -->
+
+        <section id="solving" class="solving">
+            <h3 class="solving__title">THE COFE SẼ GIẢI QUYẾT VẤN ĐỀ CỦA BẠN</h3>
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-4 m-12 c-12">
+                        <div class="solving__list">
+                            <img src="./assets/img/quality.jpg" alt="" class="solving__list--img">
+                            <div class="solving__list--title">CHẤT LƯỢNG</div>
+                            <div class="solving__list--text">Chất lượng sản phẩm cao, đã được trải qua kiểm định và đánh giá bởi hơn 10000 người dùng và 300 đối tác</div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-12 c-12">
+                        <div class="solving__list">
+                            <img src="./assets/img/ship.jpg" alt="" class="solving__list--img">
+                            <div class="solving__list--title">GIAO HÀNG</div>
+                            <div class="solving__list--text">Không còn phải lo lắng về việc đợi đến nhiều ngày để nhận được sản phẩm. Dịch vụ giao hàng của chúng tôi sẽ đưa sản phẩm đến tận tay bạn trong thời gian ngắn nhất.</div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-12 c-12">
+                        <div class="solving__list">
+                            <img src="./assets/img/tuvankhachhang.jpg" alt="" class="solving__list--img">
+                            <div class="solving__list--title">TƯ VẤN KHÁCH HÀNG</div>
+                            <div class="solving__list--text">"Một đội ngũ tư vấn chuyên nghiệp, tận tâm và giàu kinh nghiệm sẵn sàng lắng nghe và giải đáp mọi thắc mắc của bạn. Chúng tôi cam kết mang đến cho bạn trải nghiệm mua sắm trực tuyến tốt nhất.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product -->
+
+        <section class="product" id="product">
+            <h2 class="product__title">DANH MỤC SẢN PHẨM</h2>
+            <p class="product__desc">Sản phẩm chính</p>
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-4 m-6 c-12">
+                        <div class="product__list">
+                            <div class="product__list--img">
+                                <img src="./assets/img/Coffee/culicoffee.jpg" alt="">
+                            </div>
+                            <div class="product__list--info">
+                                <h3 class="product__info--name">Culi Coffee</h3>
+                                <div class="product__list--rate">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="product__list-price">250.000đ</div>
+
+                                <div class="product__list--btn">
+                                    <button class="product__btn--detail">Chi tiết</button>
+                                    <button class="product__btn--order">Đặt Hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col l-4 m-6 c-12">
+                        <div class="product__list">
+                            <div class="product__list--img">
+                                <img src="./assets/img/Coffee/cafe2.webp" alt="">
+                            </div>
+                            <div class="product__list--info">
+                                <h3 class="product__info--name">Sữa tẩm hạt Cafe</h3>
+                                <div class="product__list--rate">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="product__list-price">400.000đ</div>
+
+                                <div class="product__list--btn">
+                                    <button class="product__btn--detail">Chi tiết</button>
+                                    <button class="product__btn--order">Đặt Hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col l-4 m-6 c-12">
+                        <div class="product__list">
+                            <div class="product__list--img">
+                                <img src="./assets/img/Coffee/cf3.jpg" alt="">
+                            </div>
+                            <div class="product__list--info">
+                                <h3 class="product__info--name">Cà phê Cocon</h3>
+                                <div class="product__list--rate">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="product__list-price">350.000đ</div>
+
+                                <div class="product__list--btn">
+                                    <button class="product__btn--detail">Chi tiết</button>
+                                    <button class="product__btn--order">Đặt Hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col l-4 m-6 c-12">
+                        <div class="product__list">
+                            <div class="product__list--img">
+                                <img src="./assets/img/Coffee/cf4.jpg" alt="">
+                            </div>
+                            <div class="product__list--info">
+                                <h3 class="product__info--name">Cà phê Happy</h3>
+                                <div class="product__list--rate">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="product__list-price">150.000đ</div>
+
+                                <div class="product__list--btn">
+                                    <button class="product__btn--detail">Chi tiết</button>
+                                    <button class="product__btn--order">Đặt Hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col l-4 m-6 c-12">
+                        <div class="product__list">
+                            <div class="product__list--img">
+                                <img src="./assets/img/Coffee/cf5.webp" alt="">
+                            </div>
+                            <div class="product__list--info">
+                                <h3 class="product__info--name">Cà Phê Đak Lak</h3>
+                                <div class="product__list--rate">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="product__list-price">399.000đ</div>
+
+                                <div class="product__list--btn">
+                                    <button class="product__btn--detail">Chi tiết</button>
+                                    <button class="product__btn--order">Đặt Hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col l-4 m-6 c-12">
+                        <div class="product__list">
+                            <div class="product__list--img">
+                                <img src="./assets/img/Coffee/Robuta.jpg" alt="">
+                            </div>
+                            <div class="product__list--info">
+                                <h3 class="product__info--name">Cà Phê Robuta</h3>
+                                <div class="product__list--rate">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="product__list-price">370.000đ</div>
+
+                                <div class="product__list--btn">
+                                    <button class="product__btn--detail">Chi tiết</button>
+                                    <button class="product__btn--order">Đặt Hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SHOP -->
+
+        <section class="other-product">
+            <h2 class="other-product__title">SẢN PHẨM KHÁC</h2>
+            <div class="shop">
+                <div class="swiper mySwiper shop__container">
+                    <div class="swiper-wrapper shop__content">
+                        <div class="swiper-slide shop__card">
+                            <div class="shop__card--content">
+                                <div class="card__content--img">
+                                    <img src="./assets/img/Coffee/CFchon.jpg" alt="">
+                                </div>
+
+                                <div class="shop__card--name">Cà phê Chồn</div>
+                                <div class="shop__card--desc">Cà phê được chế biến từ phân thải ra của chồn hương.</div>
+
+                                <div class="shop__card--rate">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+
+                                <button class="shop__card--btn bn24">ĐẶT HÀNG</button>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide shop__card">
+                            <div class="shop__card--content">
+                                <div class="card__content--img">
+                                    <img src="./assets/img/Coffee/mayphacaphe.jpg" alt="">
+                                </div>
+
+                                <div class="shop__card--name">Máy pha cà phê</div>
+                                <div class="shop__card--desc">Nhanh chóng, tiện dụng, chất lượng đảm bảo</div>
+
+                                <div class="shop__card--rate">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+
+                                <button class="shop__card--btn bn24">ĐẶT HÀNG</button>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide shop__card">
+                            <div class="shop__card--content">
+                                <div class="card__content--img">
+                                    <img src="./assets/img/Coffee/mayxaysinhto.jpg" alt="">
+                                </div>
+
+                                <div class="shop__card--name">Máy xay sinh tố</div>
+                                <div class="shop__card--desc">Nhanh chóng, tiện dụng, chất lượng đảm bảo</div>
+
+                                <div class="shop__card--rate">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+
+                                <button class="shop__card--btn bn24">ĐẶT HÀNG</button>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide shop__card">
+                            <div class="shop__card--content">
+                                <div class="card__content--img">
+                                    <img src="./assets/img/Coffee/mayxayda.jpeg" alt="">
+                                </div>
+
+                                <div class="shop__card--name">Máy xay đá</div>
+                                <div class="shop__card--desc">Nhanh chóng, tiện dụng, chất lượng đảm bảo</div>
+
+                                <div class="shop__card--rate">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+
+                                <button class="shop__card--btn bn24">ĐẶT HÀNG</button>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide shop__card">
+                            <div class="shop__card--content">
+                                <div class="card__content--img">
+                                    <img src="./assets/img/Coffee/cacao.jpg" alt="">
+                                </div>
+
+                                <div class="shop__card--name">Ca Cao</div>
+                                <div class="shop__card--desc">Bột cacao nguyên chất 100% cacao không đường</div>
+
+                                <div class="shop__card--rate">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+
+                                <button class="shop__card--btn bn24">ĐẶT HÀNG</button>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide shop__card">
+                            <div class="shop__card--content">
+                                <div class="card__content--img">
+                                    <img src="./assets/img/Coffee/suatuoi.png" alt="">
+                                </div>
+
+                                <div class="shop__card--name">Sữa tươi</div>
+                                <div class="shop__card--desc">Sữa tươi nguyên chất, dinh dưỡng tràn đầy</div>
+
+                                <div class="shop__card--rate">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+
+                                <button class="shop__card--btn bn24">ĐẶT HÀNG</button>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide shop__card">
+                            <div class="shop__card--content">
+                                <div class="card__content--img">
+                                    <img src="./assets/img/Coffee/macca.jpg" alt="">
+                                </div>
+
+                                <div class="shop__card--name">Hạt Macca</div>
+                                <div class="shop__card--desc">Sản phẩm tự nhiên.<br> Ăn xanh sạch - Sống khỏe re</div>
+
+                                <div class="shop__card--rate">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+
+                                <button class="shop__card--btn bn24">ĐẶT HÀNG</button>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide shop__card">
+                            <div class="shop__card--content">
+                                <div class="card__content--img">
+                                    <img src="./assets/img/Coffee/hatdieu.jpg" alt="">
+                                </div>
+
+                                <div class="shop__card--name">Hạt điều</div>
+                                <div class="shop__card--desc">Sản phẩm tự nhiên.<br> Không chất bảo quản.</div>
+
+                                <div class="shop__card--rate">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+
+                                <button class="shop__card--btn bn24">ĐẶT HÀNG</button>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide shop__card">
+                            <div class="shop__card--content">
+                                <div class="card__content--img">
+                                    <img src="./assets/img/Coffee/duong.jpg" alt="">
+                                </div>
+
+                                <div class="shop__card--name">Đường</div>
+                                <div class="shop__card--desc">Sản phẩm tự nhiên <br> Không chất bảo quản.</div>
+
+                                <div class="shop__card--rate">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+
+                                <button class="shop__card--btn bn24">ĐẶT HÀNG</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- reason -->
+
+        <section id="reason" class="parallax reason">
+            <div class="parallax__content">
+                <h2 class="parallax__title">TẠI SAO BẠN NÊN CHỌN CHÚNG TÔI</h2>
+                <p class="parallax__desc">Nhà phân phối cà phê hàng đâu Việt Nam</p>
+            </div>
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-3 m-6 c-12">
+                        <div class="reason__list">
+                            <i class="reason__icon bi bi-emoji-heart-eyes"></i>
+                            <h3 class="reason__title">CHẤT LƯỢNG</h3>
+                            <p class="reason__text">Sử dụng cà phê nguyên liệu thô từ Việt Nam, mang hương vị đậm đà, độc đáo và hấp dẫn.</p>
+                        </div>
+                    </div>
+
+                    <div class="col l-3 m-6 c-12">
+                        <div class="reason__list">
+                            <i class="reason__icon bi bi-bar-chart-line"></i>
+                            <h3 class="reason__title">XU THẾ</h3>
+                            <p class="reason__text">Thường xuyên cập nhật hot trend mà không bị mất đi bản sắc dân tộc.</p>
+                        </div>
+                    </div>
+
+                    <div class="col l-3 m-6 c-12">
+                        <div class="reason__list">
+                            <i class="reason__icon bi bi-chat-dots"></i>
+                            <h3 class="reason__title">BÍ QUYẾT</h3>
+                            <p class="reason__text">Cà phê được rang xay từ những bí quyết gia truyền qua nhiều thế hệ.</p>
+                        </div>
+                    </div>
+
+                    <div class="col l-3 m-6 c-12">
+                        <div class="reason__list">
+                            <i class="reason__icon bi bi-fire"></i>
+                            <h3 class="reason__title">TINH THẦN VÀ GIÁ TRỊ</h3>
+                            <p class="reason__text">món quà tặng ý nghĩa, tỏ lòng tri ân, sự tôn trọng và tình cảm gắn kết.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Partner -->
+
+        <section id="partner" class="partner">
+
+            <h2 class="partner__title">ĐỐI TÁC CỦA CHÚNG TÔI</h2>
+            <p class="partner__desc">Với hơn 300 đối tác trên toàn Việt Nam</p>
+            <div class="partner__list marquee">
+                <div class="marquee--inner">
+                    <span>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/280_starbucks.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/aha.png" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/coffee house.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/effoc coffee.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/file_restaurant_photo_kkxh_16222-36e63a26-210529031107.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/Gemini.png" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/Guta.png" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/hightland.png" alt="" class="partner__item--img">
+                        </div>
+                    </span>
+                    <span>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/280_starbucks.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/aha.png" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/coffee house.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/effoc coffee.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/file_restaurant_photo_kkxh_16222-36e63a26-210529031107.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/Gemini.png" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/Guta.png" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/hightland.png" alt="" class="partner__item--img">
+                        </div>
+                    </span>
+                </div>
+            </div>
+
+            <div class="partner__list marquee">
+                <div class="marquee--inner marquee--inner-reserve">
+                    <span>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/milano.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/PhucLong.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/urban-station-coffee-takeaway-1647318569.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/TrungNguyen.png" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/cfbar.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/cofehouser.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/tullly.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/thegoatcf.jpg" alt="" class="partner__item--img">
+                        </div>
+                    </span>
+                    <span>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/milano.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/PhucLong.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/urban-station-coffee-takeaway-1647318569.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/TrungNguyen.png" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/cfbar.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/cofehouser.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/tullly.jpg" alt="" class="partner__item--img">
+                        </div>
+                        <div class="partner__list--item">
+                            <img src="./assets/img/Coffee/Logo/thegoatcf.jpg" alt="" class="partner__item--img">
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+
+        <section id="contact" class="contact">
+            <div class="contact-form">
+                <h2 class="contact-form__title uppercase">Để lại thông tin</h2>
+                <p class="contact-form__desc">Để chúng tôi tư vấn đặt hàng cụ thể hơn</p>
+                <form id="form" class="contact-form__input">
+                    <div class="input-box">
+                        <input id="name" type="text" required>
+                        <label for="name">Họ và tên</label>
+                    </div>
+                    <div class="input-box">
+                        <input id="phone" type="text" required>
+                        <label for="phone">Số điện thoại</label>
+                    </div>
+                    <div class="input-box">
+                        <input id="address" type="text" required>
+                        <label for="address">Địa chỉ</label>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-box__item text-shadow">
+                            <h3 class="info-box__item--title">Giới tính</h3>
+                            <div class="info-box__item--check">
+                                <input checked="checked" type="radio" name="sex" id="male">
+                                <label for="male">Nam</label>
+                                <input checked="checked" type="radio" name="sex" id="female">
+                                <label for="female">Nữ</label>
+                            </div>
+                        </div>
+                        <div class="info-box__item text-shadow">
+                            <h3 class="info-box__item--title">Tư vấn</h3>
+                            <div class="info-box__item--check">
+                                <input checked="checked" type="radio" name="sex" id="male">
+                                <label id="hihi" for="male">Nam</label>
+                                <input checked="checked" type="radio" name="sex" id="female">
+                                <label for="female">Nữ</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form__submit">
+                        <button class="contact-form__submit--button">Đặt hàng ngay</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Comment -->
+
+        <section class="comment">
+            <h2 class="comment__title">Hơn 10000 người đã sử dụng</h2>
+            <p class="comment__desc">Hãy lăng nghe cảm nhận của họ</p>
+
+            <div class="grid wide">
+                <div class="comment__count">25 bình luận</div>
+                <hr>
+                <div class="comment__list">
+                    <div class="comment__list--img">
+                        <img src="./assets/img/meow.jpg" alt="">
+                    </div>
+                    <div class="comment__list--info">
+                        <h3 class="comment__info--name">Cường Nguyễn</h3>
+                        <p class="comment__info--message">Sản phẩm tuyệt vời, sẽ còn mua thêm.</p>
+                        <div class="comment__info--rate">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="comment__info--interact">
+                            <a href="" class="comment__interact--like">Thích</a>
+                            <a href="" class="comment__interact--like">Phản hồi</a>
+                            <div class="comment__interact--count">
+                                <i class="bi bi-hand-thumbs-up"></i>
+                                <span>25</span>
+                            </div>
+                            <div class="comment__interact--time">14 giờ trước</div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="comment__list">
+                    <div class="comment__list--img">
+                        <img src="./assets/img/avatar2.jpg" alt="">
+                    </div>
+                    <div class="comment__list--info">
+                        <h3 class="comment__info--name">Lê Dương Bảo Lâm</h3>
+                        <p class="comment__info--message">Trời ơi gì mà ngon ghê vậy, uống ròi không quên được luôn á. Chắc phải mua trăm gói nữa mất.</p>
+                        <div class="comment__info--rate">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="comment__info--interact">
+                            <a href="" class="comment__interact--like">Thích</a>
+                            <a href="" class="comment__interact--like">Phản hồi</a>
+                            <div class="comment__interact--count">
+                                <i class="bi bi-hand-thumbs-up"></i>
+                                <span>16</span>
+                            </div>
+                            <div class="comment__interact--time">17 giờ trước</div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="comment__list">
+                    <div class="comment__list--img">
+                        <img src="./assets/img/avatar1.jpg" alt="">
+                    </div>
+                    <div class="comment__list--info">
+                        <h3 class="comment__info--name">Trấn Thành</h3>
+                        <p class="comment__info--message">Chất lượng, nhân viên tư vấn nhiệt tình, chu đáo. Sản phẩm có hào quang rực rỡ</p>
+                        <div class="comment__info--rate">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="comment__info--interact">
+                            <a href="" class="comment__interact--like">Thích</a>
+                            <a href="" class="comment__interact--like">Phản hồi</a>
+                            <div class="comment__interact--count">
+                                <i class="bi bi-hand-thumbs-up"></i>
+                                <span>60</span>
+                            </div>
+                            <div class="comment__interact--time">2 ngày trước</div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+
+        <section class="footer">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-6 m-6 c-12 footer__item">
+                        <h3 class="footer__item--title uppercase">Cà phê Trung Nguyên</h3>
+                        <div class="footer__item--content">
+                            <div class="footer__item--contact"><i class="bi bi-house-fill"></i><span>Địa chỉ: 321 ngõ 281 Trần Khát Chân, Hai Bà Trưng, Hà Nội</span></div>
+                            <div class="footer__item--contact"><i class="bi bi-telephone-fill"></i><span>Hotline: 0936202289</span></div>
+                            <div class="footer__item--contact"><i class="bi bi-envelope-fill"></i><span>Email: suzikostore@gmail.com</span></div>
+                            <div class="footer__item--contact"><i class="bi bi-minecart"></i><span>Shopee: https://shopee.vn/suziko_official</span></div>
+                        </div>
+                    </div>
+                    <div class="col l-6 m-6 c-12 footer__item">
+                        <h3 class="footer__item--title uppercase">Cà phê Trung Nguyên</h3>
+                        <div class="footer__item--content">
+                            <div class="footer__item--contact"><i class="bi bi-house-fill"></i><span>Địa chỉ: 321 ngõ 281 Trần Khát Chân, Hai Bà Trưng, Hà Nội</span></div>
+                            <div class="footer__item--contact"><i class="bi bi-telephone-fill"></i><span>Hotline: 0936202289</span></div>
+                            <div class="footer__item--contact"><i class="bi bi-envelope-fill"></i><span>Email: suzikostore@gmail.com</span></div>
+                            <div class="footer__item--contact"><i class="bi bi-minecart"></i><span>Shopee: https://shopee.vn/suziko_official</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidePerGroup: 3,
+            lazyLoad: true,
+            loop: true,
+            autoplay: {
+                delay: 10000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                1: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                740: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1023: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    slidePerGroup: 3,
+                },
+                // khi độ rộng màn hình nhỏ hơn 768px
+            },
+        });
+    </script>
+
+    <script src="./assets/js/main.js"></script>
+
+</body>
+</html>
